@@ -1,16 +1,25 @@
 import { createGlobalStyle } from "styled-components";
 import "@fontsource/roboto";
+import "@fontsource/outfit";
 
 const GlobalStyles = createGlobalStyle`
+    :root {
+    --primaryColor: #1e1e1e;
+    --accentColor: #cccf18;
+    --primaryFont: "Roboto", sans-serif;
+    --displayFont: "Saira Stencil One", sans-serif;
+    --titleFont: "Outfit", sans-serif;
+  }
+
     *, ::before, ::after {
         box-sizing: border-box;
       }
 
     body {
         margin: 0;
-        font-family: "Roboto", sans-serif;
+        font-family: var(--primaryFont);
         font-size: 1rem;
-        background-color: #1E1E1E;
+        background-color: var(--primaryColor);
         color: #fff
       }
 
