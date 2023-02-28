@@ -1,8 +1,12 @@
+import Button from "../Button/Button";
+
 const Form = (): JSX.Element => {
+  let isDisabled = false;
+
   return (
-    <form>
-      <h2>Register for the event</h2>
-      <label htmlFor="email">
+    <form className="form">
+      <h2 className="form__title">Register for the event</h2>
+      <label htmlFor="email" className="form__label">
         Email
         <input
           type="email"
@@ -10,22 +14,30 @@ const Form = (): JSX.Element => {
           id="email"
           autoComplete="off"
           placeholder="Introduce your email"
+          className="form__input"
         />
       </label>
-      <label htmlFor="password">
+      <label htmlFor="password" className="form__label">
         Password
         <input
           type="password"
           name="password"
           id="password"
           placeholder="Introduce your password"
+          className="form__input"
         />
       </label>
-      <label htmlFor="image">
+      <label htmlFor="image" className="form__label">
         Image
-        <input type="file" name="image" id="image" accept="image/*" />
+        <input
+          type="file"
+          name="image"
+          id="image"
+          accept="image/*"
+          className="form__input form__input--file"
+        />
       </label>
-      <button type="submit">Sign up</button>
+      <Button isDisabled={isDisabled} text="Sign up" />
     </form>
   );
 };

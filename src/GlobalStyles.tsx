@@ -5,6 +5,7 @@ import "@fontsource/outfit";
 const GlobalStyles = createGlobalStyle`
     :root {
     --primaryColor: #1e1e1e;
+    --secondaryColor: #fff;
     --accentColor: #cccf18;
     --primaryFont: "Roboto", sans-serif;
     --displayFont: "Saira Stencil One", sans-serif;
@@ -19,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
         font-family: var(--primaryFont);
         font-size: 1rem;
         background-color: var(--primaryColor);
-        color: #fff
+        color: var(--secondaryColor)
       }
 
   h1, h2 {
