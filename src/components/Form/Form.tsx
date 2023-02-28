@@ -1,10 +1,11 @@
 import Button from "../Button/Button";
+import FormStyled from "./FormStyled";
 
 const Form = (): JSX.Element => {
   let isDisabled = false;
 
   return (
-    <form className="form">
+    <FormStyled className="form">
       <h2 className="form__title">Register for the event</h2>
       <label htmlFor="email" className="form__label">
         Email
@@ -38,7 +39,7 @@ const Form = (): JSX.Element => {
         />
       </label>
       <Button isDisabled={isDisabled} text="Sign up" />
-    </form>
+    </FormStyled>
   );
 };
 

@@ -17,6 +17,7 @@ const GlobalStyles = createGlobalStyle`
 
     body {
         margin: 0;
+        padding: 20px;
         font-family: var(--primaryFont);
         font-size: 1rem;
         background-color: var(--primaryColor);
@@ -37,10 +38,13 @@ const GlobalStyles = createGlobalStyle`
       text-decoration: none;
     }
 
-    button {
+    input, button {
       font-family: inherit;
       border: none;
       font-size: inherit;
+    }
+
+    button {
       background-color: transparent;
       cursor: pointer;
     };
