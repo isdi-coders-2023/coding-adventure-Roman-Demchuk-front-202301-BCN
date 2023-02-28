@@ -8,7 +8,6 @@ const GlobalStyles = createGlobalStyle`
     --accentColor: #cccf18;
     --primaryFont: "Roboto", sans-serif;
     --displayFont: "Saira Stencil One", sans-serif;
-    --titleFont: "Outfit", sans-serif;
   }
 
     *, ::before, ::after {
