@@ -18,9 +18,10 @@ const FormStyled = styled.form`
       gap: 9px;
     }
 
-    &__input:not(&__input--file) {
+    &__input {
       padding: 11px;
       border-radius: 8px;
+      background-color: var(--secondaryColor);
     }
   }
 
@@ -30,7 +31,7 @@ const FormStyled = styled.form`
         font-size: 2.5rem;
       }
 
-      &__input:not(&__input--file) {
+      &__input {
         padding: 20px 11px;
       }
     }
