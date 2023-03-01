@@ -9,13 +9,14 @@ const ButtonStyled = styled.button`
   width: 323.02px;
   height: 40px;
   font-family: var(--displayFont);
-  font-size: 20px;
+  font-size: 1.25rem;
+  align-self: center;
 
   :disabled {
     opacity: 57%;
   }
 
-  @media (min-width: 786px) {
+  @media (min-width: 987px) {
     height: 57px;
   }
 `;
