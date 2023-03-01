@@ -4,9 +4,9 @@ import Form from "./Form";
 describe("Given a From component", () => {
   describe("When rendered", () => {
     test("Then it should show a 'Sign up' button", () => {
-      const expectedButtonText = "Sign up";
-      render(<Form />);
+      const expectedButtonText = /sign up/i;
 
+      render(<Form />);
       const button = screen.getByRole("button", { name: expectedButtonText });
 
       expect(button).toBeInTheDocument();
@@ -14,29 +14,29 @@ describe("Given a From component", () => {
 
     test("Then it should show a label with text 'Email'", () => {
       const expectedLabelText = /email/i;
+
       render(<Form />);
+      const labelEmail = screen.getByLabelText(expectedLabelText);
 
-      const label = screen.getByLabelText(expectedLabelText);
-
-      expect(label).toBeInTheDocument();
+      expect(labelEmail).toBeInTheDocument();
     });
 
     test("Then it should show a label with text 'Password'", () => {
       const expectedLabelText = /password/i;
+
       render(<Form />);
+      const labelPassword = screen.getByLabelText(expectedLabelText);
 
-      const label = screen.getByLabelText(expectedLabelText);
-
-      expect(label).toBeInTheDocument();
+      expect(labelPassword).toBeInTheDocument();
     });
 
     test("Then it should show a label with text 'Image'", () => {
       const expectedLabelText = /image/i;
+
       render(<Form />);
+      const labelImage = screen.getByLabelText(expectedLabelText);
 
-      const label = screen.getByLabelText(expectedLabelText);
-
-      expect(label).toBeInTheDocument();
+      expect(labelImage).toBeInTheDocument();
     });
   });
 });
