@@ -1,8 +1,20 @@
+import { useState } from "react";
 import Button from "../Button/Button";
 import FormStyled from "./FormStyled";
 
 const Form = (): JSX.Element => {
-  let isDisabled = false;
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleChangeEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setEmail(event.target.value);
+  };
+
+  const handleChangePassword = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setPassword(event.target.value);
+  };
+
+  const isDisabled = email === "" || password === "";
 
   return (
     <FormStyled className="form">
@@ -14,6 +26,8 @@ const Form = (): JSX.Element => {
           name="email"
           autoComplete="off"
           placeholder="Introduce your email"
+          value={email}
+          onChange={handleChangeEmail}
           className="form__input"
         />
       </label>
@@ -23,6 +37,8 @@ const Form = (): JSX.Element => {
           type="password"
           name="password"
           placeholder="Introduce your password"
+          value={password}
+          onChange={handleChangePassword}
           className="form__input"
         />
       </label>
